@@ -1,3 +1,9 @@
+import os  # Dosyanın en üstüne ekle
+
+# ... (diğer ayarlar) ...
+
+# Şifreyi doğrudan yazmak yerine sistemden çekiyoruz
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
@@ -261,3 +267,4 @@ if __name__ == '__main__':
     # Render PORT ismini otomatik verir, vermezse 10000 kullanır
     port = int(os.environ.get('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
+
