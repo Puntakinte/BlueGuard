@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{{ url_for('static', filename='images/hero.jpg') }}" class="d-block mx-lg-auto img-fluid rounded shadow" alt="Hakkımızda" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hakkımızda</h1>
+        <p class="lead">Blueguard Akademi olarak, su güvenliği ve cankurtarma alanında en yüksek standartlarda eğitimler sunmayı misyon edindik. 2013 yılından bugüne tecrübeli eğitmenliğimizle yetiştirdiğimiz 1000 den fazla Gümüş ve Bronz Cankurtaranlar, bireyleri ve kurumları suda hayat kurtarma bilgi ve becerileriyle donatıyoruz.</p>
+        <h3 class="mt-4">Vizyonumuz</h3>
+        <p>Türkiye'de su güvenliği bilincini artırmak ve boğulma vakalarını en aza indirmek için lider eğitim kurumu olmak.</p>
+        <h3 class="mt-4">Değerlerimiz</h3>
+        <ul>
+            <li>Profesyonellik ve Uzmanlık</li>
+            <li>Güvenlik Odaklılık</li>
+            <li>Sürekli Gelişim</li>
+            <li>Etik İlkeler</li>
+        </ul>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+          <a href="{{ url_for('egitimler_sayfasi') }}" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Eğitimlerimize Göz Atın</a>
+          <a href="#" type="button" class="btn btn-outline-secondary btn-lg px-4">Bize Ulaşın</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

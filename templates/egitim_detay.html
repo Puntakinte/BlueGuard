@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="{% if session.get('is_admin') %}col-lg-6{% else %}col-lg-8{% endif %}">
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <div class="detay-kutusu">
+                <h1>{{ egitim.ad }}</h1>
+                <p><strong>Tarih:</strong> {{ egitim.tarih }}</p>
+            </div>
+        
+            {% if not kontenjan_dolu %}
+                <h2>Bu Eğitime Başvur</h2>
+                {% if hata_mesaji %}
+                    <div class="hata">{{ hata_mesaji }}</div>
+                {% endif %}
+                <form method="POST">
+                    <label for="ad_soyad">Ad Soyad:</label>
+                    <input type..." required>
+                    <label for="tc_no">TC Kimlik No:</label>
+                    <input type..." required>
+                    <label for="dogum_tarihi">Doğum Tarihi:</label>
+                    <input type="date"..." required>
+                    <button type="submit">Başvuruyu Gönder</button>
+                </form>
+            {% else %}
+                {% endif %}
+        </div>
+
+        {% if session.get('is_admin') %}
+        <div class="col-lg-6">
+            <h2>Bu Eğitime Başvuranlar ({{ ogrenciler|length }})</h2>
+            {% if ogrenciler %}
+                <table>
+                    <thead>...</thead>
+                    <tbody>
+                        {% for ogrenci in ogrenciler %}
+                        <tr>
+                            <td>{{ ogrenci.ad_soyad }}</td>
+                            <td>{{ ogrenci.tc_no }}</td>
+                            <td>{{ ogrenci.dogum_tarihi }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>Bu eğitime henüz başvuru yapılmamıştır.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+    
+    <br>
+    <a href="{{ url_for('egitimler_sayfasi') }}">Eğitim Listesine Dön</a>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center bg-light rounded-3 shadow-sm">
+    <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Cankurtaran Eğitimi" style="width: 100%; max-width: 700px; border-radius: 15px;">
+    <h1 class="display-5 fw-bold text-body-emphasis">Profesyonel Cankurtaran Eğitimleri</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Uluslararası standartlarda, uzman eğitmen kadromuzla geleceğin cankurtaranlarını yetiştiriyoruz. Güvenli bir gelecek için ilk adımı atın.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{{ url_for('egitimler_sayfasi') }}" type="button" class="btn btn-primary btn-lg px-4 gap-3">Eğitimlerimizi İnceleyin</a>
+            <a href="#" type="button" class="btn btn-outline-secondary btn-lg px-4">Bize Ulaşın</a>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <img src="{{ url_for('static', filename='images/feature1.jpg') }}" class="img-fluid rounded">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Cankurtarma Malzemeleri</h3>
+        <p>Profesyonel cankurtaran ekipmanlarımız, uluslararası standartlara ve TSSF Yönetmeliklerine uygundur. Ürünlerimizi incelemek ve spariş vermek için lütfen iletişime geçin.</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <img src="{{ url_for('static', filename='images/feature2.jpg') }}" class="img-fluid rounded">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Sertifikalı Programlar</h3>
+        <p>Eğitimlerimiz sonunda alacağınız sertifikalar, Türkiye Sualtı Sporları Federasyonu (TSSF) tarafından onaylı olup, ulusal ve uluslararası alanda geçerliliğe sahiptir.</p>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

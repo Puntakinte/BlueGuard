@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 mb-4 text-center bg-light rounded-3 shadow-sm">
+    <h1 class="display-5 fw-bold text-body-emphasis">Hizmetlerimiz</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-0">Güvenli sular, profesyonel çözümler. Blueguard Akademi olarak sunduğumuz hizmetler aşağıdadır.</p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center d-flex flex-column"> <h4 class="card-title mt-3">Cankurtaran Eğitimleri</h4>
+                <p class="card-text">TSSF onaylı Bronz ve Gümüş Cankurtaran eğitim programlarımızla uluslararası geçerliliğe sahip sertifikalar edinin.</p>
+                <a href="{{ url_for('egitimler_sayfasi') }}" class="btn btn-primary mt-auto">Eğitimlere Git</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+             <div class="card-body text-center d-flex flex-column"> <h4 class="card-title mt-3">Su Güvenliği Danışmanlığı</h4>
+                <p class="card-text">Otel, site, plaj ve özel mülkleriniz için su güvenliği standartlarını belirliyor, personel denetimi ve risk analizi hizmetleri sunuyoruz.</p>
+                </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+             <div class="card-body text-center d-flex flex-column"> <h4 class="card-title mt-3">
+                    <i class="bi bi-bandaid-fill text-danger me-2"></i>İlk Yardım Eğitimleri 
+                </h4>
+                <p class="card-text">Sadece suda değil, karada da hayat kurtarabilmeniz için temel ve ileri seviye ilk yardım eğitimleri düzenliyoruz.</p>
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 mb-4 text-center bg-light rounded-3 shadow-sm">
+    <h1 class="display-5 fw-bold text-body-emphasis">Cankurtaran Malzemeleri</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-0">Profesyonel cankurtaranların görevlerini güvenli ve etkin bir şekilde yerine getirebilmeleri için ihtiyaç duydukları temel ekipmanlar.</p>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <img src="{{ url_for('static', filename='images/ilkyardim_cantasi.jpg') }}" class="card-img-top" alt="İlkyardım Çantası" style="height: 200px; object-fit: contain; padding: 5px;"> <div class="card-body">
+                <h5 class="card-title">İlkyardım Çantası</h5>
+                <p class="card-text">Acil durumlarda gerekli olan temel tıbbi malzemeleri (bandaj, gazlı bez, antiseptik, makas vb.) içeren, kolay taşınabilir çanta.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/cankurtaran_uniformasi.jpg') }}" class="card-img-top" alt="Cankurtaran Üniforması" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Cankurtaran Üniforması</h5>
+                <p class="card-text">Genellikle belirgin renklerde (kırmızı, sarı), cankurtaranın kolayca tanınmasını sağlayan, suya dayanıklı ve rahat hareket imkanı sunan giysi.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/yuzer_sedye.jpg') }}" class="card-img-top" alt="Yüzer Sedye" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Yüzer Sedye</h5>
+                <p class="card-text">Özellikle omurga yaralanması şüphesi olan kazazedeleri sudan güvenli bir şekilde çıkarmak için kullanılan, su üzerinde batmayan sert sedye.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/cankurtaran_gorev_bayraklari.jpg') }}" class="card-img-top" alt="Cankurtaran Görev Bayrakları" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Cankurtaran Görev Bayrakları</h5>
+                <p class="card-text">Plajlarda veya havuzlarda suyun durumunu (güvenli, tehlikeli, yüzmek yasak vb.) veya cankurtaranın görevde olup olmadığını belirtmek için kullanılan renkli bayraklar.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/firlatma_halati.jpg') }}" class="card-img-top" alt="Fırlatma Halatı" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Fırlatma Halatı</h5>
+                <p class="card-text">Ucunda yüzer bir halka veya top bulunan ve suya girmeden kazazedeye atılarak çekmek için kullanılan, kolay fırlatılabilir ip torbası.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/firlatma_topu.jpg') }}" class="card-img-top" alt="Fırlatma Topu" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Fırlatma Topu</h5>
+                <p class="card-text">Fırlatma halatının ucuna bağlı olan, su üzerinde batmayan ve kazazedenin kolayca tutunabilmesi için tasarlanmış top veya halka.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/kurtarma_kemeri.jpg') }}" class="card-img-top" alt="Kurtarma Kemeri" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Kurtarma Kemeri</h5>
+                <p class="card-text">Genellikle sert plastikten yapılmış, yüzebilirliği yüksek, kazazedeye destek sağlamak veya çekmek için kullanılan, ip ve omuz askısı olan şamandıra.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/durbun.jpg') }}" class="card-img-top" alt="Dürbün" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Dürbün</h5>
+                <p class="card-text">Geniş su alanlarını (plaj, göl vb.) gözlemlemek, potansiyel tehlikeleri uzaktan fark etmek veya yardım çağrılarını tespit etmek için kullanılır.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/megafon.jpg') }}" class="card-img-top" alt="Megafon" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Megafon</h5>
+                <p class="card-text">Kalabalık ortamlarda veya uzak mesafelere sesli uyarılar yapmak, talimatlar vermek için kullanılan ses yükseltici cihaz.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+             <img src="{{ url_for('static', filename='images/kakic.jpg') }}" class="card-img-top" alt="Kakıç" style="height: 200px; object-fit: contain; padding: 5px;">
+            <div class="card-body">
+                <h5 class="card-title">Kakıç</h5>
+                <p class="card-text">Uzun bir sırığın ucunda bulunan kanca şeklinde aparat. Özellikle havuzlarda, suya girmeden kenara yakın durumdaki kazazedeyi çekmek için kullanılır.</p>
+            </div>
+        </div>
+    </div>
+
+</div> {% endblock %}
